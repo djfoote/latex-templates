@@ -1,0 +1,40 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{davis}[2015/09/05 Macros I use frequently. By Davis Foote.]
+
+% Common sets of numbers
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+% Derivative w.r.t. #1. Optional argument for nth derivative.
+\newcommand{\ddx}[2][]{
+    \ifthenelse{\isempty{#1}}
+    {\frac{\mathrm{d}}{\mathrm{d}#2}}
+    {{\frac{\mathrm{d}^{#1}}{\mathrm{d}{#2}^{#1}}}}
+}
+% Derivative of #1 w.r.t. #2. Optional argument for nth derivative.
+\newcommand{\dydx}[3][]{%
+    \ifthenelse{\isempty{#1}}
+    {\frac{\mathrm{d}#2}{\mathrm{d}#3}}
+    {{\frac{\mathrm{d}^{#1}#2}{\mathrm{d}{#3}^{#1}}}}
+}
+% Same two commands for partial derivatives.
+\newcommand{\ppx}[2][]{
+    \ifthenelse{\isempty{#1}}
+    {\frac{\partial}{\partial#2}}
+    {{\frac{\partial^{#1}}{\partial{#2}^{#1}}}}
+}
+\newcommand{\pypx}[3][]{%
+    \ifthenelse{\isempty{#1}}
+    {\frac{\partial#2}{\partial#3}}
+    {{\frac{\partial^{#1}#2}{\partial{#3}^{#1}}}}
+}
+
+% Indicator random variable
+\newcommand{\ind}[1]{\mathbbm{1}_{\{#1\}}}
+% Expectation
+\newcommand{\E}{\mathbb{E}}
+
+\endinput
