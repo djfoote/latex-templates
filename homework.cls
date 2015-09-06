@@ -6,7 +6,6 @@
 \setlength\parskip{1em}
 \setlength\headheight{15pt}
 
-\RequirePackage{palatino}
 \RequirePackage{xifthen}
 \RequirePackage{amsmath}
 \RequirePackage{textcomp}
