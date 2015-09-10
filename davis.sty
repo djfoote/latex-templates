@@ -1,6 +1,22 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{davis}[2015/09/05 Macros I use frequently. By Davis Foote.]
 
+\RequirePackage{xifthen}
+\RequirePackage{amsmath}
+\RequirePackage{algorithm}
+\RequirePackage[noend]{algpseudocode}
+\RequirePackage{textcomp}
+\RequirePackage{amssymb}
+\RequirePackage{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{verbatim}
+\RequirePackage{enumerate}
+\RequirePackage{amsthm}
+\RequirePackage{fancyhdr}
+\RequirePackage{optparams}
+\RequirePackage{bbm}
+\RequirePackage[utf8x]{inputenc}
+
 % Common sets of numbers
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -43,5 +59,17 @@
 
 % Common function names
 \newcommand{\multideg}{\text{multideg}}
+
+% Boldface for ideals and varieties
+\newcommand{\V}{\mathbf{V}}
+\newcommand{\I}{\mathbf{I}}
+
+% Renaming things in algpseudocode
+\algrenewcommand{\algorithmicrequire}{\textbf{Input:}}
+\algrenewcommand{\algorithmicensure}{\textbf{Output:}}
+\newcommand{\Input}{\Require}
+\newcommand{\Output}{\Ensure}
+\algrenewcommand{\algorithmicforall}{\textbf{for each}}
+\newcommand{\ForEach}{\ForAll}
 
 \endinput
